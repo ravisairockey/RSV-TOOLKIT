@@ -155,12 +155,32 @@ autorecon_init() {
   sudo autorecon "$ip"
 }
 
+# gMSA HASH CRACKER FUNCTION
+gmsa_hash_cracker() {
+    printf "\n${RED}========== gMSA HASH CRACKER ==========${NC}\n"
+    printf "${YELLOW}Enter the msDS-ManagedPassword data blob below.${NC}\n"
+    printf "${YELLOW}It should be a single line of comma-separated numbers (e.g., 1,0,0,...):${NC}\n"
+    read -rp "Blob: " blob_data
+
+    if [ -z "$blob_data" ]; then
+        echo -e "${RED}Error: No data provided.${NC}"
+        return
+    fi
+
+    # Get the directory of the currently running script
+    SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+    
+    # Execute the python script
+    python3 "$SCRIPT_DIR/gmsa_hash_cracker.py" "$blob_data"
+}
+
 # ─────────────────────────────────────────────
 # MENU
 echo -e "\n${GREEN}Choose option:${NC}"
 echo "1) Transfile"
 echo "2) Proxify"
 echo "3) Autorecon Init"
+echo "4) gMSA Hash Cracker"
 read -rp "Enter choice: " choice
 
 case $choice in
@@ -178,6 +198,9 @@ case $choice in
   3)
     read -rp "Enter machine name: " mname
     autorecon_init "$mname"
+    ;;
+  4)
+    gmsa_hash_cracker
     ;;
   *)
     echo -e "${RED}Invalid choice.${NC}"
