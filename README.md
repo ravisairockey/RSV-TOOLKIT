@@ -4,6 +4,8 @@
 
 **A command-line toolkit for pentesters and security researchers, designed to streamline common tasks in Kali Linux.**
 
+> **Note:** The badges below will show "repo not found" until you create a public repository on GitHub named `RSV-TOOLKIT` under the `ravisairockey` account. The links are correctly configured for when the repository is published.
+
 </div>
 
 <p align="center">
@@ -66,10 +68,6 @@ To launch the toolkit, run the script from your terminal:
 ## 🛠️ Usage
 
 Upon running the script, you will be presented with a menu of options.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/ravisairockey/RSV-TOOLKIT/main/RSV-TOOLKIT.png" alt="Toolkit Screenshot" width="600">
-</div>
 
 ### **1. Transfile**
 This option helps you generate commands to transfer files.
