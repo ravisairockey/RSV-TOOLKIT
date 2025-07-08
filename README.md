@@ -4,8 +4,6 @@
 
 **A command-line toolkit for pentesters and security researchers, designed to streamline common tasks in Kali Linux.**
 
-> **Note:** The badges below will show "repo not found" until you create a public repository on GitHub named `RSV-TOOLKIT` under the `ravisairockey` account. The links are correctly configured for when the repository is published.
-
 </div>
 
 <p align="center">
