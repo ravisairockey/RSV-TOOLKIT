@@ -1,28 +1,33 @@
 <div align="center">
 
-# 🛡️ RSV-TOOLKIT 🛡️
+<h1 align="center">🛡️ RSV-TOOLKIT 🛡️</h1>
 
-**A command-line toolkit for pentesters and security researchers, designed to streamline common tasks in Kali Linux.**
+<p align="center">
+  <strong>A command-line toolkit for pentesters and security researchers, designed to streamline common tasks in Kali Linux.</strong>
+</p>
 
 </div>
 
+---
+
 <p align="center">
-  <img src="https://img.shields.io/github/license/ravisairockey/RSV-TOOLKIT?style=for-the-badge&color=blue" alt="License">
-  <img src="https://img.shields.io/github/stars/ravisairockey/RSV-TOOLKIT?style=for-the-badge&color=yellow" alt="Stars">
-  <img src="https://img.shields.io/github/forks/ravisairockey/RSV-TOOLKIT?style=for-the-badge&color=green" alt="Forks">
-  <img src="https://img.shields.io/github/issues/ravisairockey/RSV-TOOLKIT?style=for-the-badge&color=red" alt="Issues">
+  <a href="#-features">Features</a> •
+  <a href="#-getting-started">Getting Started</a> •
+  <a href="#️-usage">Usage</a> •
+  <a href="#-contributing">Contributing</a> •
+  <a href="#-license">License</a>
 </p>
 
 ---
 
 ## ✨ Features
 
-This toolkit provides a menu-driven interface for:
-
--   **Transfile**: Generate one-liners for transferring files to Windows or Linux targets using various methods like `wget`, `PowerShell`, `certutil`, `netcat`, and `scp`.
--   **Proxify**: Quickly set up reverse proxy connections using `ligolo` or `chisel`. It provides the necessary commands for both the attacker (Kali) and target machines.
--   **Autorecon Init**: Automate the initial setup for a new target machine for reconnaissance with `autorecon`. It creates a dedicated directory, sets up a CherryTree template, and starts `autorecon`.
--   **gMSA Hash Cracker**: Crack the NTLM hash from a Group Managed Service Account's `msDS-ManagedPassword` data blob.
+| Feature            | Description                                                                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Transfile**      | Generate one-liners for transferring files to Windows or Linux targets using `wget`, `PowerShell`, `certutil`, `netcat`, and `scp`.      |
+| **Proxify**        | Quickly set up reverse proxy connections using `ligolo` or `chisel`. Provides commands for both the attacker and target machines.        |
+| **Autorecon Init** | Automate the initial setup for `autorecon`. Creates a dedicated directory, sets up a CherryTree template, and starts the scan.          |
+| **gMSA Cracker**   | Crack the NTLM hash from a Group Managed Service Account's `msDS-ManagedPassword` data blob, ready for Pass-the-Hash attacks.          |
 
 ---
 
@@ -53,7 +58,9 @@ This toolkit provides a menu-driven interface for:
     chmod +x rsv-toolkit.sh gmsa_hash_cracker.py
     ```
 
-### Running the Toolkit
+---
+
+## 🛠️ Usage
 
 To launch the toolkit, run the script from your terminal:
 
@@ -61,32 +68,7 @@ To launch the toolkit, run the script from your terminal:
 ./rsv-toolkit.sh
 ```
 
----
-
-## 🛠️ Usage
-
-Upon running the script, you will be presented with a menu of options.
-
-### **1. Transfile**
-This option helps you generate commands to transfer files.
--   **Enter filename**: The name of the file you want to transfer (e.g., `shell.exe`).
--   **Platform (w/l)**: `w` for Windows targets, `l` for Linux targets.
--   **Port (default 80)**: The port your local web server is running on.
-
-### **2. Proxify**
-This option helps you set up a proxy.
--   **Platform (w/l)**: `w` for Windows targets, `l` for Linux targets.
--   **Method (l=ligolo/c=chisel)**: `l` for `ligolo`, `c` for `chisel`.
-
-### **3. Autorecon Init**
-This option initializes the reconnaissance process for a new machine.
--   **Enter machine name**: A name for the target machine (e.g., `HTB-Lame`). This will be used to create a directory.
--   You will then be prompted to enter the IP address for `autorecon`.
-
-### **4. gMSA Hash Cracker**
-This option takes the raw data blob from a gMSA's `msDS-ManagedPassword` attribute and calculates the corresponding NTLM hash.
--   **Blob**: Paste the blob as a single line of comma-separated byte values (e.g., `1,0,0,0,36,2,...`).
--   The script will output the calculated NTLM hash, which can be used for Pass-the-Hash attacks.
+You will be presented with a menu of options to choose from.
 
 ---
 
@@ -109,5 +91,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 <div align="center">
-Crafted with ❤️ by <a href="https://github.com/ravisairockey">@RSVamil</a>
+  Crafted with ❤️ by <a href="https://github.com/ravisairockey">@RSVamil</a>
 </div>
